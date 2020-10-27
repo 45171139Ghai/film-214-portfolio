@@ -1,4 +1,4 @@
 # Lighthouse Loft
-This a basic static site. It is a yoga site for a small business around my neigbourhood. 
-I final version is not added here
+This is a yoga site for a small business around my neigbourhood. 
+It is static based on just html, css and and a bit javascript.
 
