@@ -365,6 +365,10 @@ nav {
   background-size: cover;
 } */
 
+.about-me_about{
+  margin-top: 2em;
+}
+
 .my-service {
   background-image: url('../res/Tina/yoga-w.jpg');
   background-attachment: fixed;
