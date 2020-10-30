@@ -406,20 +406,6 @@ nav {
 }
 
 
-
-.link:hover{
-  animation-name: menubar;
-  animation-duration: .5s;
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-@keyframes menubar{
-  100% {
-    background-color: hsl(193deg, 100%, 10%);
-  }
-
-}
-
 .item {
   
   margin: 0 .5em;
@@ -436,6 +422,19 @@ nav {
 }
 
 
+.menu-bar.link:hover{
+  animation-name: menubar;
+  animation-duration: .5s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-fill-mode: forwards;
+}
+
+@keyframes menubar{
+  100% {
+    background-color: hsl(193deg, 100%, 10%);
+  }
+
+}
 
 
 
