@@ -407,10 +407,10 @@ nav {
 
 
 
-.menu-bar:hover{
+.link:hover{
   animation-name: menubar;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @keyframes menubar{
