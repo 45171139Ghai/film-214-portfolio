@@ -296,18 +296,21 @@ nav {
 
 } 
 
-/* .img--intro{
-  display: grid;
-  grid-area: img;
-  min-width:
+.menu-bar .link:hover{
+  color: var(--clr-light);
+  animation-name: menu-bar ;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }
 
-.img--intro {
-  grid-area: img;
-  min-width: 250px;
-  position: relative;
-  z-index: 2;
-} */
+
+@keyframes menu-bar {
+  100% {
+    background-color: hsl(193, 100%, 25%);
+  }
+}
+
 
 
 
@@ -420,22 +423,6 @@ nav {
   font-size: var(--fs-h3);
   
 }
-
-
-.menu-bar.link:hover{
-  background-color: white;
-  /* animation-name: menubar;
-  animation-duration: .5s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards; */
-}
-
-/* @keyframes menubar{
-  100% {
-    background-color: hsl(193deg, 100%, 10%);
-  }
-
-} */
 
 
 
