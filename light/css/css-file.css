@@ -424,7 +424,7 @@ nav {
 
 .menu-bar.link:hover{
   animation-name: menubar;
-  animation-duration: 0.5ms;
+  animation-duration: 5000ms;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation-fill-mode: forwards;
 }
