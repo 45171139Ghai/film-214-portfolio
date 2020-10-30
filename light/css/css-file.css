@@ -431,7 +431,7 @@ nav {
 
 @keyframes menubar{
   100% {
-    background-color: hsl(193deg, 100%, 15%);
+    background-color: hsl(193deg, 100%, 10%);
   }
 
 }
