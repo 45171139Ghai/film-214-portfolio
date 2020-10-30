@@ -427,7 +427,6 @@ nav {
   animation-duration: 500ms;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation-fill-mode: forwards;
-  border-radius: 25%;
 }
 
 @keyframes menubar{
