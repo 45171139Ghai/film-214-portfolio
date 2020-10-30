@@ -405,6 +405,21 @@ nav {
   
 }
 
+
+
+.menu-bar:hover{
+  animation-name: menubar;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes menubar{
+  100% {
+    background-color: hsl(--clr-accent, 100%, 25%);
+  }
+
+}
+
 .item {
   
   margin: 0 .5em;
