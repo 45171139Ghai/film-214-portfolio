@@ -422,9 +422,9 @@ nav {
 }
 
 
-.menu-bar.link:hover{
+.link:hover{
   animation-name: menubar;
-  animation-duration: 4s;
+  animation-duration: .5s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
