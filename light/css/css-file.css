@@ -424,14 +424,15 @@ nav {
 
 .menu-bar.link:hover{
   animation-name: menubar;
-  animation-duration: .5s;
+  animation-duration: 500ms;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation-fill-mode: forwards;
+  border-radius: 25%;
 }
 
 @keyframes menubar{
   100% {
-    background-color: hsl(193deg, 100%, 10%);
+    background-color: hsl(193deg, 100%, 15%);
   }
 
 }
