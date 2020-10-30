@@ -30,9 +30,9 @@ function scrollFunction() {
     } 
 
     else {
-      myBar.style.top = "-50px" 
+      myBar.style.top = "0px" 
       myBar.classList.add("nav-transparent");
-      myBar.classList.remove("nav-colored");
+      //myBar.classList.remove("nav-colored");
       
     }
   

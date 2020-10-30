@@ -281,7 +281,7 @@ nav {
 
       .img--intro {
         grid-area: img;
-        min-width: 250px;
+        min-width: 350px;
         position: relative;
         z-index: 2;
       }
@@ -295,6 +295,19 @@ nav {
       }
 
 } 
+
+/* .img--intro{
+  display: grid;
+  grid-area: img;
+  min-width:
+}
+
+.img--intro {
+  grid-area: img;
+  min-width: 250px;
+  position: relative;
+  z-index: 2;
+} */
 
 
 
