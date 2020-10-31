@@ -461,6 +461,44 @@ nav {
 }
 
 
+
+@media(min-width: 600px){
+  #home{
+  background-image: url('../Tina/white.jpeg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 200px;
+  
+  
+}
+
+#about{
+  background-image: url('../Tina/lh.svg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 120px;
+  
+  
+}
+
+.space {
+  background-image: url('../Tina/studiofl.jpeg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  padding: 180px;
+}
+}
+
+
 /* .home-pic{
   display: grid;
   
