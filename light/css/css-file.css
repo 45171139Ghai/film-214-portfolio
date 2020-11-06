@@ -29,7 +29,7 @@
    
 }
 
-@media (min-width: 800px) {
+@media (min-width: 950px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
@@ -45,7 +45,7 @@
 
 html {
   scroll-behavior: smooth;
-  
+
 }
 
 
@@ -92,6 +92,44 @@ h3 {
 h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+
+.item{
+  
+}
+.link{
+  text-decoration: none;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-reg);
+  color: var(--clr-dark);
+  border: 0;
+}
+
+.container{
+  position: fixed;
+  background-color: var(--clr-accent);
+  width: 100%;
+  margin: auto;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+
 
 .section-title {
   margin-bottom: .25em;
@@ -259,10 +297,6 @@ nav {
 
 
 
-/* intro */
-.intro {
-  position: relative;
-}
 
 
 
@@ -290,13 +324,12 @@ nav {
         display: none;
       }
 
-      .logo {
-        display: none;
-      }
-
+    
 } 
 
-.menu-bar .link:hover{
+/* hover effect */
+
+.link:hover{
   color: var(--clr-light);
   animation-name: menu-bar ;
   animation-duration: 2s;
@@ -310,6 +343,7 @@ nav {
     background-color: hsl(193, 100%, 25%);
   }
 }
+
 
 
 
@@ -364,14 +398,15 @@ nav {
 }
 
 
-.intro {
+/* .intro {
   background-image: url('../res/Tina/sunset.jpeg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 100%;
+  margin: auto;
   
-  
-}
+} */
 
 /* .about-me {
 
@@ -392,42 +427,10 @@ nav {
   background-size: cover;
 }
 
-.menu-bar {
-  position: fixed;
-  display: flex;
-  opacity: var(--opacity);
-  list-style-type: none;
-  justify-content: center;
-  padding: 1.5em ;
-  /* background:var(--clr-accent); */
-
-  right: 2em;
-  left: 2em;
-  margin-top:-.8em;
-  z-index: 1000;
-  
-}
-
-
-.item {
-  
-  margin: 0 .5em;
-  
-  
-}
-
-.link{ 
-  padding: 1em;
-  color: var(--clr-dark);
-  text-decoration: none;
-  font-size: var(--fs-h3);
-  
-}
-
 
 
 @media (max-width: 600px){
-  .menu-bar {
+  .container {
     display: none;
   }
 }
@@ -455,48 +458,16 @@ nav {
 }
 
 
-.nav-colored {
-  background: var(--clr-accent);
-  
-}
-
-
-
-@media(min-width: 600px){
-  #home{
-  background-image: url('../Tina/white.jpeg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-  padding: 200px;
-  
-  
-}
-
-#about{
-  background-image: url('../Tina/lh.svg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-  padding: 120px;
-  
-  
-}
-
 .space {
   background-image: url('../Tina/studiofl.jpeg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   padding: 180px;
 }
-}
+
 
 
 /* .home-pic{
@@ -510,3 +481,62 @@ nav {
   background: red;
 
 } */
+
+
+.about-me{
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 20px;
+  /* grid-auto-rows: minmax(100px, auto); */
+  
+      
+}
+
+.section__title--about{
+  grid-column: 1/2;
+  grid-row: 1;
+  background-color: var(--clr-accent);
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+.section__subtitle--about{
+  
+  grid-column: 2 / 3;
+  grid-row: 1 ;
+  margin: auto;
+}
+
+.about-me__body{
+  grid-column: 1/3;
+  grid-row: 2 / 4;
+  background-color: var(--clr-accent);
+  border: 1px solid;
+  padding: 15px;
+}
+
+.mission{
+  grid-column: 1;
+  grid-row: 2 / 5;
+  text-decoration: underline;
+  
+}
+
+.image-mission{
+  grid-column: 2 / 3;
+  grid-row: 4;
+}
+
+.teaching-style{
+  grid-column: 1/4;
+  grid-row: 5;
+  margin: auto;
+  
+}
+
+.teaching-style .section__title-service{
+  background-color: var(--clr-accent);
+  
+}
+

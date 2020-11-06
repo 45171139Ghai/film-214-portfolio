@@ -21,44 +21,35 @@
 
     <body>
       <header>
-    
-          <!-- <div class="logo">
-            <img src="{{ url_for('static', filename='/res/Tina/sunset.lh.svg') }}" alt="logo">
-          </div> -->
-
+        <!-- hamburger menu symbol -->
           <button class="nav-toggle" aria-label="toggle navigation">
             <span class="ham"></span>
           </button> 
 
-          
+          <!-- menu bar when screen is bigger -->
+          <div class = "container">
+              <ul class="menu-bar" id="myHeader">
+                <li class="item"><a href="#home" class="link">Lighthouse Loft</a></li>
+                <li class="item"><a href="#home" class="link">Home</a></li>
+                <li class="item"><a href="#about" class="link">About</a></li>
+                <li class="item"><a href="#service" class="link">Services</a></li>
+                <li class="item"><a href="#service" class="link">Gallery</a></li>
+              </ul>
+          </div>
 
-
-          <ul class="menu-bar" id="myHeader">
-    
-            <li class="item"><a href="#home" class="link">Lighthouse Loft</a></li>
-            <li class="item"><a href="#home" class="link">Home</a></li>
-            <li class="item"><a href="#about" class="link">About</a></li>
-            <li class="item"><a href="#service" class="link">Services</a></li>
-            <li class="item"><a href="#service" class="link">Gallery</a></li>
-          </ul>
-
-
+          <!-- menu for small screen -->
           <nav class="nav ">
-            
               <ul class="nav-items ul-bar">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="#service" class="nav-link">Services</a></li>
-              </ul>
-            
+              </ul>     
           </nav>
 
       </header>
       
     <section class="intro" id="home">
-      <h1 class="section-title section__title--intro">
-        Welcome to <strong>Lighthouse Loft</strong>
-      </h1>
+      <h1 class="section-title section__title--intro">Welcome to <strong>Lighthouse Loft</strong></h1>
 
       <p class="section_subtitle section__subtitle--modifier">Yoga Studio</p>
       <img src="Tina/water.jpeg"  alt="Tina siting by the water" class="img--intro">
@@ -71,17 +62,12 @@
         <h2 class="section-title section__title--about">Who we are</h2>
         <p class="section__subtitle section__subtitle--about">Yoga studio based out of Lighthouse cove, <strong>ON</strong></p>
 
-        <!-- <div class="mission">
-          <h3>Our Mission Statement</h3>
-          <p>Welcome to Lighthouse Loft. Our mission is to create a welcoming, safe space & offer an intentional
-            practice empowering yogi to connect with true self on a nurturing journey of growth, self-discovery & acceptance.
-          </p>
-        </div> -->
-        
+      
         
         <div class="about-me__body" id ="about">
-          <img src="Tina/Lighthouse.jpeg" alt="Tina standing by the water" max-width="600px"  height="600px">
-          <h3 id="mission">Our Mission Statement</h3>
+          
+          <h3 class="mission">Our Mission Statement</h3>
+          
           <p>Welcome to Lighthouse Loft. Our mission is to create a welcoming, safe space & offer an intentional
             practice empowering yogi to connect with true self on a nurturing journey of growth, self-discovery & acceptance.
           </p>
@@ -101,13 +87,34 @@
         </div>
         
         <!-- <img src="Tina/Lighthouse.jpeg" alt="Tina standing by the water" max-width="600px"  height="600px"> -->
+        <img src="Tina/Lighthouse.jpeg" alt="Tina standing by the water" id="mission-pic" class="image-mission">
+
+
+        <!-- <h2 class="section-title section__title-service">Teaching Style</h2> -->
+      
+      <div class="teaching-style">
+        <h2 class="section-title section__title-service">Teaching Style</h2>
+        <p>I am grateful for a job that adds passion to my heart, peace to my soul & where it's always an
+          honour to hold space each I guide my tribe. I come from a trauma senssitive, hatha backround & my current teaching is 
+          from a functional perspective, balancing strength with ease.
+        </p>
+
+        <p>Yoga is much more than achieving the perfect pose. Rather, it's made up of those a-ha moments where you practice the pause, feel your body,
+          link with the breath or quiet th mind. More importantly, it's slowing down, tuning inward & finding that joy & peace that comes from within. It's always there
+           but it may have been silenced by all those noise. This connection then allows to take the yoga off your mat, into your life & live in harmony & balance.
+           And this, my friend, is true yoga!
+        </p>
+
+        <p>I think of Lighthouse Loft</p>
+
+      </div>
 
      </section>
 
 
      <!--what we do-->
      <section class="my-service" id="service">
-      <h2 class="section-title section__title-service">Teaching Style</h2>
+      <!-- <h2 class="section-title section__title-service">Teaching Style</h2>
       
       <div class="teaching-style">
         <p>I am grateful for a job that adds passion to my heart, peace to my soul & where it's always an
@@ -121,7 +128,7 @@
            And this, my friend, is true yoga!
         </p>
 
-        <p>I think of Lighthouse Loft</p>
+        <p>I think of Lighthouse Loft</p> -->
       
       </div>
       
