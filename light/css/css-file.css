@@ -721,6 +721,9 @@ ul{
 
 .about-me__body{
   grid-area: section-body;
+  background-color:hsl(190, 30%, 98%);
+  margin: 1em;
+  padding: 1em;
 }
 
 .pic-1{
@@ -749,6 +752,21 @@ ul{
   margin: 1em;
   padding: 1em; 
 }
+
+@media screen and (max-width: 480px){
+  .about-me{
+    grid-template-areas: 
+  "section-title section-title section-title section-title"
+  "section-body section-body section-body section-body"
+  "image1 image1 image1 image1"
+  "image2 image2 image2 image2"
+  "image3 image3 image3 image3"
+  "teach-title  teach-title  teach-title  teach-title"
+  "teach-content  teach-content  teach-content  teach-content";
+  }
+  
+}
+
 /* .about-me{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
