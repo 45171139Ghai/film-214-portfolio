@@ -932,6 +932,9 @@ background-color:var(--clr-dark);
   box-shadow: 4px 5px var(--clr-accent);
 }
 
+#read-more{
+  display: none;
+}
 
 .gallery-header{
   text-align: center;
@@ -939,6 +942,9 @@ background-color:var(--clr-dark);
   font-size: var(--fw-reg);
   opacity: var(--opacity);
 }
+
+
+
 
 
 
