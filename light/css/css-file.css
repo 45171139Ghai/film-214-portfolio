@@ -101,7 +101,6 @@ ul{
   font-weight: var(--fw-reg);
   color: var(--clr-dark);
   border: 0;
-  box-shadow: 1px 2px #888888;
 }
 
 .container{
@@ -136,9 +135,11 @@ ul{
   padding: .05em 1em;
 
 }
+
 .section__subtitle--modifier {
   display: flex;
   align-items: center;
+  transition: all;
 }
 
 
@@ -434,7 +435,12 @@ ul{
         max-width: 100%;
         padding: 150px;
         /* opacity: .78; */
-      }    
+      }
+      
+      /* move yoga studio statement to left */
+      .section__subtitle--modifier {
+        transform: translate(-31rem, 8rem);
+      }
 } 
 
 /* prevents humberger menu to appear from 650 onward */
