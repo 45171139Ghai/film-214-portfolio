@@ -1,4 +1,6 @@
 
+/*GLOBAL styles
+---------------------------------------------*/
 *,
 *::before,
 *::after {
@@ -7,23 +9,25 @@
 
 /* Custom Properties*/
 :root {
-    --ff-primary: 'Source Sans Pro Roboto', sans-serif;
-    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-primary: 'Lato', sans-serif;
+    --ff-secondary: 'Poppins', sans-serif;
     
     --fw-reg: 300;
-    --fw-bold: 900;
+    --fw-bold: 700;
     
-    --clr-light: #fff;
+    --clr-light: rgb(238, 232, 232);
     --clr-dark: #303030;
-    --clr-accent: #c4e1e7;
+    --clr-body: rgba(24, 23, 26, 0.66);
+    --clr-accent: #10e963bb;
+  
    
     --fs-h1: 3rem;
 
-    --fs-h2: 2.25rem;
+    --fs-h2: 2.5rem;
     
-    --fs-h3: 1.25rem;
+    --fs-h3: 1.02rem;
    
-    --fs-body: 1rem;
+    --fs-body: .9rem;
     
  
     --opacity: .80;
@@ -32,18 +36,19 @@
 /* change the font-size for screen 950px and bigger  */
 @media (min-width: 950px) {
     :root {
-        /* --fs-h1: 4.5rem; */
         --fs-h1: 4rem;
         --fs-h2: 3.25rem;
-        --fs-h3: 1.5rem;
-        --fs-body: 1.125rem;
+        --fs-h3: 2.5rem;
+        --fs-body: 1rem;
     } 
+    
 }
 
 
 
 
-/* General styles */
+/* General styles 
+--------------------------------------------*/
 html {
   scroll-behavior: smooth;
   font-size: 100%;
@@ -51,20 +56,27 @@ html {
 
 body {
     background: var(--clr-light);
-    color: var(--clr-dark);
+    color: var(--clr-body);
     margin: 0;
+    padding: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
-section {
-  padding: 5em 2em ;
+section{
+  display: block;
+}
+
+section{
+  margin: 0;
+  padding-top: 2.5em;
+  text-align: center;
 }
 
 img {
     display: block;
-    max-width: 100%;
+    width: 300px;
 }
 
 strong { font-weight: var(--fw-bold) }
@@ -76,455 +88,135 @@ h3 {
     margin: 0;
 }
 
-h1 { font-size: var(--fs-h1) }
+/* h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
-h3 { font-size: var(--fs-h3) }
+h3 { font-size: var(--fs-h3) } */
 
 ul{
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-
-/* menu bar css */
-.menu-bar{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  opacity: var(--opacity);
-}
-
-.link{
-  text-decoration: none;
-  font-size: var(--fs-h3);
-  font-weight: var(--fw-reg);
-  color: var(--clr-dark);
-  border: 0;
-}
-
-.container{
-  position: fixed;
-  background-color: var(--clr-accent);
-  width: 100%;
-  margin: auto;
-  padding: 1.5em .9375em;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-
-
-/* intro Section and subtitle formatting */
-.section-title {
-  margin-bottom: .25em;
-}
-
-.section__title--intro strong {
+img{
   display: block;
+  width: 100%;
 }
 
-.section__title--intro{
-  opacity: var(--opacity);
-}
+/*            Header styles
+--------------------------------------------*/
 
-.section__subtitle--modifier,
-.section__subtitle--about {
-  background: var(--clr-accent);
-  font-family: var(--ff-secondary);
-  padding: .05em 1em;
-
-}
-
-.section__subtitle--modifier {
-  display: flex;
+.menu-bar {
+  display: flex; 
+  justify-content: flex-end;
   align-items: center;
-  transition: all;
-}
-
-
-/* header */
- header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em;
-  
-} 
-
-
-/* menu for the small screen */
- nav {
+  padding: 20px;
   position: fixed;
-  background: var(--clr-dark);
-  opacity: var(--opacity);
-  color: var(--clr-light);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-
-
-  padding-top: 12px;
-  transform: translateX(100%);
-  transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
-}
-
-
-.nav-items {
-  list-style: none;
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-
-.nav-link{
-  color: inherit;
-  font-weight: var(--fw-bold);
-  font-size: var(--fs-h2);
-  text-decoration: none;
-  }
-
-
-.nav-link:hover {
-    color: var(--clr-accent);
-    
-  }
+  width: 100%;
+  transition: all 1000ms ease;
+  background-color: rgb(28, 35, 22);
   
-
-.ham {
-    display: block;
-    position: relative;
-  }
-
-.ham,
-.ham::before,
-.ham::after {
-  background: var(--clr-dark);
-  width: 2em;
-  height: 3px;
-  border-radius: 1em;
-  transition: transform 250ms ease-in-out;
-}
-
-
-.ham::before,
-.ham::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-
-
-.ham::before{top: 8px;}
-.ham::after {bottom: 8px;}
-
-
-  
-.nav-toggle {
-    padding: .5em;
-    background: transparent;
-    border: 0;
-    cursor: pointer;  
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    z-index: 1000;  
-  }
-
-  .nav-open .nav{
-    transform: translateX(0);
-  }
-
-  .nav-open .nav-toggle {
-    position: fixed;
-  }
-  
-  
-  
-  .nav-open .ham {
-    background: var(--clr-accent);
-    transform: rotate(.625turn);
-  }
-  
-  
-        
-        
-  .nav-open .ham::before {
-    background: var(--clr-accent);
-    transform: rotate(90deg) translateX(-6px);
-  }
-  
-  
-  .nav-open .ham::after{
-    opacity: 0;
-  }  
-
-
-
-
-  /* Gallery css for the wider screen */
-  .gallery_section{
-    width: 100%;
-    max-width: 120rem;
-    margin: auto;
-    padding: 0 1.5rem;
-
-  }
-
-  .image_gallery{
-
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: auto;
-    grid-gap: 1.5rem;
-    grid-template-areas:
-    'img-1 img-2 img-3 img-3 '
-    'img-1 img-4 img-5 img-6'
-    'img-7 img-7 img-8 img-6';
-  }
-
-  .image_gallery a{
-    width: 100%;
-    height: 25rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-  }
-
-
-  .image_gallery a i{
-    color: rgb(255,255,.6);
-    font-size: 3rem;
-    position: relative;
-    z-index: 100;
-    padding: 1rem 3rem;
-    border: 2px solid rgba(255,255,255,.6);
-    border-radius: .4rem;
-    opacity: 0;
-    transition: opacity .5s
-  }
-
-
-  .image_gallery a::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0, .8);
-    opacity: 0;
-    transition: opacity .5s;
-  }
-
-
-  .image_gallery a:hover i,
-  .image_gallery a:hover::before{
-    opacity: 1;
-
-  }
-
-
-  .img_1{
-    grid-area: img-1;
-    background-image: url('../Tina/couch.jpeg');
-    min-height: 51.5rem;
-  }
-
-  .img_2{
-    grid-area: img-2;
-    background-image: url('../Tina/stand.jpeg');
-  }
-  
-  .img_3{
-    grid-area: img-3;
-    background-image: url('../Tina/studiofl.jpeg');
-  }
-
-  .img_4{
-    grid-area: img-4;
-    background-image: url('../Tina/Triangle.jpeg');
-  }
-
-  .img_5{
-    grid-area: img-5;
-    background-image: url('../Tina/night.jpeg');
-  }
-
-  .img_6{
-    grid-area: img-6;
-    min-height: 51.5rem;
-    background-image: url('../Tina/star.jpeg');
-  }
-
-  .img_7{
-    grid-area: img-7;
-    background-image: url('../Tina/sunset.jpeg');
-  }
-
-  .img_8{
-    grid-area: img-8;
-    background-image: url('../Tina/water.jpeg');
-  }
-
-
-
-@media (min-width: 750px){
-      .intro {
-        /* display: grid; */
-        /* grid-column-gap: 1em;    this add a gap between the pic and the title */
-        /* width: min-content; */
-        /* margin: 0 auto;         center the content  */
-        display: grid;
-        grid-template-columns: "50px auto auto";
-        /* grid-template-rows: auto; */
-        grid-column-gap: 1em;
-        margin: 0 auto;
-        grid-template-areas: 
-          /* "img subtitle" */
-          /* "img subtitle"; */
-        "img . ."
-        "subtitle subtitle title";
-        
-        
-       
-        grid-template-columns: min-content max-content;
-      }
-
-
-      .img--intro {
-        grid-area: img;
-        min-width: 450px;
-        position: relative;
-        z-index: 2;
-      
-      }
-
-      .section__title--intro{
-        grid-area: subtitle;
-        min-width: min-content;
-      }
-
-
-      .section__subtitle--modifier{
-        grid-area: title;
-        min-width: min-content;
-        
-      }
-
-      /* landing page decoration */
-      .intro{
-        background-image: url('../Tina/lh.svg');
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        /* background-position: center center; */
-        max-width: 100%;
-        padding: 150px;
-        /* opacity: .78; */
-      }
-      
-      /* move yoga studio statement to left */
-      .section__subtitle--modifier {
-        transform: translate(-31rem, 8rem);
-      }
 } 
 
-/* prevents humberger menu to appear from 650 onward */
-@media screen and (min-width: 600px){
-  .nav-toggle {
-        display: none;
-      }
+
+.links{
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+
+ul{
+  list-style: none;
+}
+
+.links a{
+  text-decoration: none;
+  font-size: .75em;
+  letter-spacing: .25em;
+  margin-left: 15px; 
+  text-transform: uppercase;
+  color: rgb(223, 157, 213);
 }
 
 
-@media screen and (max-width: 900px){
-  .image_gallery{
-    grid-template-areas:
-        'img-1 img-1 img-2 img-2'
-        'img-1 img-1 img-3 img-3'
-        'img-4 img-4 img-5 img-5'
-        'img-6 img-7 img-7 img-7'
-        'img-8 img-8 img-8 img-8';
-  }
-  .image_gallery a{
-    height: 20rem;
-  }
+.logo  a{
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #edeaeed9;
+}
 
-  .img_1{
-    min-height: 41.5rem;
-  }
+.change-menuColor{
+  background:rgba(59, 69, 72, 0.851);
+  color:#10e963bb;
+  transition: all 1000ms ease-in;
+}
 
-  .img_6{
-    min-height: 20rem;
-  }
+.change-menuColor a{
+  color:#10e963bb;
+  transition: all 1000ms ease-in;
+}
+
+
+/*            FILM CLASS STYLES
+--------------------------------------------*/
+
+.class-name{
+  /* text-align: center;
+  color:#05050583;
+  font-size: var(--fs-h4);
+  background: rgb(219, 224, 220);
+  padding: 20px 0;
+  z-index: -1; */
+
+  background-image: url('/Tina/pexels-ary.jpeg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  color: #edeaeed9;
+}
+
+.background-img{
+  background-image: url('/Tina/pexels-ary.jpeg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
 
 }
 
 
-@media screen and (max-width: 600px){
-  .image_gallery{
-    grid-template-areas:
-        'img-1 img-1 img-1 img-1'
-        'img-2 img-2 img-2 img-2'
-        'img-3 img-3 img-3 img-3'
-        'img-4 img-4 img-4 img-4'
-        'img-5 img-5 img-5 img-5'
-        'img-6 img-6 img-6 img-6'
-        'img-7 img-7 img-7 img-7'
-        'img-8 img-8 img-8 img-8';
-  }
-  .image_gallery a,
-  .img-1,
-  img_6{
-    min-height: 41.5rem;
-    height: 30rem;
-  }
+/*            MAIN STYLES
+--------------------------------------------*/
 
-  .img_1{
-    min-height: 41.5rem;
-  }
-
-  .img_6{
-    min-height: 20rem;
-  }
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+  justify-content: center;
+  align-items: center;
 
 }
 
-
-/* hover effect */
-
-.link:hover{
-  color: var(--clr-light);
-  animation-name: menu-bar ;
-  animation-duration: 2s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
+.container-g{
+  padding: 20px;
+  background:rgba(238, 240, 241, 0.851);
+  color: rgb(200, 208, 214);
 }
 
+.container-g.shadow-box{
+  box-shadow: .4px .4px 8px black;
+}
 
-@keyframes menu-bar {
-  100% {
-    background-color: hsl(193, 100%, 25%);
-  }
+.container-g:hover{
+  box-shadow: 1px 1px 10px black;
 }
 
 
 
-
+/*          FOOTER SECTION
+--------------------------------------------*/
 
 .footer {
   background: var(--clr-dark);
@@ -559,20 +251,29 @@ ul{
   text-decoration: underline;
 }
 
-.social-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin: 2em 0 0;
-  padding: 0;
+
+/*          utilities
+--------------------------------------------*/
+
+
+.btn {
+  background: rgb(237, 237, 237);
+  color: rgb(223, 157, 213);
+  padding: .25em;
+  border-radius: .5em;
+  box-shadow: 0 0 .4em black;
+  text-shadow: 1px 1px black;
 }
 
-.social-list__item {
-  margin: 0 .5em;
+
+.content-wrapper{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px;
 }
 
-.social-list__link {
-  padding: .5em;
+.shadow-box{
+  box-shadow: .1px .1px 1px black;
 }
 
 
@@ -584,457 +285,4 @@ ul{
   background-size: cover;
 } */
 
-#mission{
-  margin-top: 2em;
-}
 
-/* .my-service {
-  background-image: url('../res/Tina/yoga-w.jpg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-
-
-@media (max-width: 600px){
-  .container {
-    display: none;
-  }
-}
-
-
-
-/*grid display*/
-/*change menubar background color with the scrolling*/
-
-.nav-transparent {
-  /* background: var(--clr-light); */
-  transition: .6s;
-
-}
-
-/* space class styling */
-.space {
-  display: flex;
-  max-width: 100%;
-  height: auto;
-  padding: 180px;
-  margin: 0;
-  justify-content: center;
-  font-weight: var(--fw-reg);
-  color: var(--clr-dark);
-}
-
-
-
-
-/* This cover the background with floor picture */
-.space {
-  background-image: url('../Tina/stand.jpeg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* opacity: var(--opacity); */
-  background-position: center center;
-}
-
-
-
-
-/* The new design for grid */
-
-.our-mission{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-auto-rows: auto;
-  grid-gap: 2em;
-  grid-template-areas: 
-  "section-title section-title section-title section-title"
-  "section-body section-body section-body section-body"
-  " image1 image2 image3 image4 "
-  ;
-}
-
-
-.section-title-mission{
-  grid-area: section-title;
-  /* font-weight: var(--fw-reg);
-  border: .1em solid var(--clr-accent);
-  text-align: center;
-  margin-top: 20px;
-  opacity: var(--opacity); */
-}
-
-.mission-body{
-  grid-area: section-body;
-  background-color:hsl(190, 30%, 98%);
-  margin: 1em;
-  padding: 1em;
-  opacity: var(--opacity);
-}
-
-.pic-1{
-  grid-area: image1;
-}
-
-.pic-2{
-  grid-area: image2;
-}
-.pic-3{
-  grid-area: image3;
-}
-
-.pic-4{
-  grid-area: image4;
-}
-
-.teaching-section{
-  background-color: hsla(180, 5%, 69%, 0.123);
-}
-
-
-
-teaching-section{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-auto-rows: auto;
-  grid-area:  
-  "teach-title  teach-title  teach-title  teach-title"
-  "teach-content  teach-content  teach-content  teach-content"
-  ;
-  opacity: var(--opacity);
-}
-
-
-
-.teaching__title{
-  grid-area: teach-title;
-  /* font-weight: var(--fw-reg); */
-  /* background-color: var(--clr-accent); */
-  /* border: .1em solid var(--clr-accent);
-  text-align: center;
-  margin: -1.2em 0 1em;
-  opacity: var(--opacity); */
-}
-
-.teaching-style{
-  grid-area: teach-content;
-  background-color:hsl(190, 30%, 98%);
-  margin: 1em;
-  padding: 1em; 
-}
-
-@media screen and (max-width: 480px){
-  .our-mission{
-    grid-template-areas: 
-  "section-title section-title section-title section-title"
-  "section-body section-body section-body section-body"
-  "image1 image1 image1 image1"
-  "image2 image2 image2 image2"
-  "image3 image3 image3 image3"
-  "image4 image4 image4 image4"
-  "teach-title  teach-title  teach-title  teach-title"
-  "teach-content  teach-content  teach-content  teach-content";
-  }
-}
-
-/* style sections title */
-.section-title-style {
-  font-weight: var(--fw-reg);
-  border: .1em solid var(--clr-accent);
-  text-align: center;
-  margin: -1.2em 0 1em;
-  opacity: var(--opacity);
-}
-
-
-.service-style {
-  font-weight: var(--fw-reg);
-  background-color: var(--clr-light);
-  text-align: center;
-  margin: -1.2em 0 1em;
-  opacity: var(--opacity);
-}
-
-
-.my-service{
-  background-image: url('../Tina/studiofl.jpeg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* opacity: var(--opacity); */
-  background-position: center;
-}
-.offering-title{
-  padding: 1.25em;
-}
-
-.the-loft-title{
-  padding: 1.25em;
-  margin-top: 8em;
-}
-
-.the-loft-studio{
-  padding: 3.125em;
-}
-
-.offerings{
-  padding: 3.125em;
-  margin: auto;
-}
-
-
-.the-loft-studio{
-  /* background-image: url('../Tina/couch.jpeg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: var(--opacity);
-  background-position: center; */
-  background-color: var(--clr-accent);
-  /* color:hsl(195, 20%, 96%) */
-}
-
-
-.offerings{
-  background-color: var(--clr-accent);
-  margin-top: 2em;
-}
-
-@media (min-width: 950px){
-  .my-service{
-    display: grid;
-    grid-template-columns: "1fr 200px";
-    grid-template-rows: 381 200px;
-    grid-column-gap: 2.5em;
-    grid-template-areas: 
-        "s-title o-title"
-        "s-content o-content";
-  }
-  .the-loft-title{
-    grid-area: s-title;
-    padding: 0;
-    margin-top: 0;
-  }
-
-}
-
-
-.offering-title{
-  grid-area: o-title;
-}
-
-.offerings{
-  grid-area: o-content;
-}
-/* .the-loft-title{
-  grid-area: s-title;
-  padding: 0;
-  margin-top: 0;
-} */
-.the-loft-studio{
-  grid-area: s-content;
-}
-
-
-
-
-
-
-
-.intro-instructor{
-  text-align: center;
-  background-image: url('../Tina/yoga-w.jpg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: var(--opacity);
-  background-position: center;
-  page-break-after: auto;
-}
-
-.intro-instructor{
-  font-weight: var(--fw-bold);
-  font-weight: var(--fs-h3);
-}
-
-.meet-instructor{
-  background-color:hsla(180, 5%, 69%, 0.123);
-}
-
-.meet-instructor {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-auto-rows: auto;
-  grid-gap: 2em;
-  grid-template-areas: 
-  ". . . ."
-  "in-img in-img about-content about-content"
-  /* "role role role ." */
-  "more-about more-about more-about ."
-  "btn . . ."
-  ;
-}
-
-.role{
-  grid-area: role;
-  transform: translate(0,-6em);
-  color:var(--clr-accent);
-  padding: 0 1em;
-  font-size: var(--fs-h4);
-  font-weight: var(--fw-reg);
-  
-
-}
-
-.instructor-name{
-  /* grid-area: name; */
-  transform: translate(0,-5em);
-  color:var(--clr-accent);
-  padding: 0 1em;
-  margin-top: 1.5em;
-  font-size: var(--fs-h4);
-  font-weight: var(--fw-bold);
-
-}
-
-.instructor-img{
-  grid-area: in-img;
-}
-
-.about-tina{
-  grid-area: about-content;
-  font-style: italic;
-  opacity: var(--opacity);
-
-}
-
-.border{
-padding: 2em 0;
-background-color:var(--clr-dark);
-}
-
-.more-about{
-  grid-area: more-about;
-}
-
-
-
-
-/* Read more and read less css */
-
-#more{
-  display: none;
-}
-
-.Btn{
-  grid-area: btn;
-}
-
-
-.Btn{
-  font-weight: var(--fw-bold);
-  box-shadow: 4px 5px var(--clr-accent);
-}
-
-#read-more{
-  display: none;
-}
-
-.gallery-header{
-  text-align: center;
-  font-weight: var(--fs-h2);
-  font-size: var(--fw-reg);
-  opacity: var(--opacity);
-}
-
-
-
-
-
-
-/* experimenting */
-
-/* Position the image container (needed to position the left and right arrows) */
-.container-g {
-  position: relative;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
-}
-
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
