@@ -109,7 +109,7 @@ img{
   display: flex; 
   justify-content: flex-end;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   position: fixed;
   width: 100%;
   transition: all 1000ms ease;
@@ -132,9 +132,14 @@ ul{
   text-decoration: none;
   font-size: .75em;
   letter-spacing: .25em;
-  margin-left: 15px; 
-  text-transform: uppercase;
+  margin-left: 20px; 
+  /* text-transform: uppercase; */
   color: rgb(223, 157, 213);
+}
+.links a:hover{
+ color:white;
+ transition: color 1000ms ease;
+ text-decoration: underline;
 }
 
 
@@ -162,12 +167,6 @@ ul{
 --------------------------------------------*/
 
 .class-name{
-  /* text-align: center;
-  color:#05050583;
-  font-size: var(--fs-h4);
-  background: rgb(219, 224, 220);
-  padding: 20px 0;
-  z-index: -1; */
 
   background-image: url('/Tina/pexels-ary.jpeg');
   background-attachment: fixed;
@@ -177,6 +176,19 @@ ul{
   color: #edeaeed9;
 }
 
+.class-name{
+  text-transform: uppercase;
+}
+
+.class-name.className2{
+  color:white;
+  letter-spacing: 5px;
+  
+}
+
+
+
+
 .background-img{
   background-image: url('/Tina/pexels-ary.jpeg');
   background-attachment: fixed;
@@ -184,6 +196,31 @@ ul{
   background-size: cover;
   height: 400px;
 
+}
+
+.proBtn {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+}
+
+.proBtn a {
+  color:rgb(28, 35, 22);
+  font-size: 1em;
+}
+
+.proBtn a:hover{
+  color:#10e963bb;
+  box-shadow: inset .1px .1px 1px black;
+  background-color: rgb(28, 35, 22);
+  text-decoration: underline;
+}
+
+@media (min-width: 950px) {
+  .background-img {
+      height: 600px;
+  } 
+  
 }
 
 
@@ -257,12 +294,13 @@ ul{
 
 
 .btn {
-  background: rgb(237, 237, 237);
+  background: rgb(230, 222, 226);
   color: rgb(223, 157, 213);
   padding: .25em;
   border-radius: .5em;
   box-shadow: 0 0 .4em black;
-  text-shadow: 1px 1px black;
+  text-shadow: .1px .1px black;
+  text-decoration: none;
 }
 
 
