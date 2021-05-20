@@ -114,7 +114,9 @@ img{
   position: fixed;
   width: 100%;
   transition: all 1000ms ease;
-  background-color: rgb(28, 35, 22); 
+  /* background-color: rgb(28, 35, 22);  */
+  background: white;
+
 } 
 
 
