@@ -139,10 +139,10 @@ ul{
   font-family: var(--ff-secondary);
 }
 .links a:hover{
+  background:rgba(59, 69, 72, 0.851);
  color:white;
  transition: color 1000ms ease;
  text-decoration: underline;
- 
 }
 
 
