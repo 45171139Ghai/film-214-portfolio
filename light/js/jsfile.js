@@ -2,6 +2,7 @@
 // about Tina implementation
 
 const myBar = document.querySelector(".menu-bar");
+const myBarFooter = document.querySelector(".footer__link");
 
 window.onscroll = function() {scrollFunction()};
 
@@ -10,10 +11,14 @@ function scrollFunction() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
      
       myBar.classList.add('change-menuColor');
+      myBarFooter.classList.add('change-menuColor');
     } 
 
     else {
       myBar.classList.remove('change-menuColor');
+      myBarFooter.classList.remove('change-menuColor');
+      myBtnCol.classList.remove('change-menuColor');
+      myTitle.classList.remove('change-menuColor');
     }
     
 }

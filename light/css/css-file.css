@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&family=Roboto&display=swap');
 /*GLOBAL styles
 ---------------------------------------------*/
 *,
@@ -9,8 +9,8 @@
 
 /* Custom Properties*/
 :root {
-    --ff-primary: 'Lato', sans-serif;
-    --ff-secondary: 'Poppins', sans-serif;
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Pattaya', sans-serif;
     
     --fw-reg: 300;
     --fw-bold: 700;
@@ -86,6 +86,7 @@ h2,
 h3 {
     line-height: 1;
     margin: 0;
+    font-family: var(--ff-secondary);
 }
 
 /* h1 { font-size: var(--fs-h1) }
@@ -109,12 +110,11 @@ img{
   display: flex; 
   justify-content: flex-end;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   position: fixed;
   width: 100%;
   transition: all 1000ms ease;
-  background-color: rgb(28, 35, 22);
-  
+  background-color: rgb(28, 35, 22); 
 } 
 
 
@@ -130,16 +130,17 @@ ul{
 
 .links a{
   text-decoration: none;
-  font-size: .75em;
+  font-size: 1em;
   letter-spacing: .25em;
   margin-left: 20px; 
-  /* text-transform: uppercase; */
-  color: rgb(223, 157, 213);
+  color: #f53844;
+  font-family: var(--ff-secondary);
 }
 .links a:hover{
  color:white;
  transition: color 1000ms ease;
  text-decoration: underline;
+ 
 }
 
 
@@ -148,7 +149,9 @@ ul{
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #edeaeed9;
+  color: #e47b82;
+  font-family: var(--ff-secondary);
+
 }
 
 .change-menuColor{
@@ -168,16 +171,21 @@ ul{
 
 .class-name{
 
-  background-image: url('/Tina/pexels-ary.jpeg');
+  background-image: url('/Tina/pexels-ary.jpeg'); 
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0 2em 0; 
   height: 100px;
-  color: #edeaeed9;
+  color: #f53844;
 }
 
 .class-name{
   text-transform: uppercase;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
 }
 
 .class-name.className2{
@@ -190,38 +198,45 @@ ul{
 
 
 .background-img{
-  background-image: url('/Tina/pexels-ary.jpeg');
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 400px;
-
+  /* background: linear-gradient(to bottom right, #3d4248 44%, #8b8989 100%); */
+ background: linear-gradient(rgba(255, 255, 255, 0.077),rgb(4, 2, 2)), url('/Tina/pexels-ary.jpeg') no-repeat center/ cover;
+ 
+ width: 100%;
+ height: 100vh;
 }
 
-.proBtn {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-}
 
-.proBtn a {
-  color:rgb(28, 35, 22);
-  font-size: 1em;
-}
 
-.proBtn a:hover{
-  color:#10e963bb;
-  box-shadow: inset .1px .1px 1px black;
-  background-color: rgb(28, 35, 22);
-  text-decoration: underline;
-}
-
-@media (min-width: 950px) {
-  .background-img {
-      height: 600px;
-  } 
+.hero-contaier{
   
 }
+
+
+
+.proBtn{
+  margin-top: 2em;
+}
+
+.big-container{
+  display: flex;
+  height: 100%;
+  max-width: 62rem;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*            MAIN STYLES
@@ -295,11 +310,11 @@ ul{
 
 .btn {
   background: rgb(230, 222, 226);
-  color: rgb(223, 157, 213);
-  padding: .25em;
+  color: #f53844;
+  padding: .5em;
   border-radius: .5em;
-  box-shadow: 0 0 .4em black;
-  text-shadow: .1px .1px black;
+  box-shadow: 1px 1px .4em black;
+  text-shadow: 1px 1px black;
   text-decoration: none;
 }
 
