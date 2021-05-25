@@ -247,7 +247,7 @@ ul{
 
 .grid{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5em;
   justify-content: center;
   align-items: center;
@@ -255,8 +255,9 @@ ul{
 }
 
 .container-g{
-  padding: 20px;
-  background:rgba(238, 240, 241, 0.851);
+  padding: 8px;
+  background:rgba(238, 240, 241, 0.851); 
+  
   color: rgb(200, 208, 214);
 }
 
@@ -273,9 +274,10 @@ ul{
 
 .gallery-background {
   background-color: #303030;
+  margin: 0 auto;
+  padding: 20px;
 
 }
-
 
 
 /*          FOOTER SECTION

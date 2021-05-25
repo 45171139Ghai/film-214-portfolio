@@ -1,0 +1,15 @@
+
+@media (min-width: 970px){
+    .gallery-background {
+      max-width: 1080;
+    
+    }
+  
+    .content-wrapper{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+  
+  }
