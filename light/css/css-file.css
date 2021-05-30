@@ -110,7 +110,7 @@ img{
   display: flex; 
   justify-content: flex-end;
   align-items: center;
-  padding: 15px;
+  padding: 2em;
   position: fixed;
   width: 100%;
   transition: all 1000ms ease;
@@ -132,6 +132,7 @@ ul{
 
 .links a{
   text-decoration: none;
+  padding: 1em 1.5em;
   font-size: 1em;
   letter-spacing: .25em;
   margin-left: 20px; 
@@ -145,6 +146,23 @@ ul{
   text-decoration: underline;
 }
 
+.sub_menu{
+  padding-top: 1em;
+}
+
+.links .sub_menu a:hover{
+  background: black;
+  padding: .4em;
+  color:white;
+  transition: color 1000ms ease;
+  text-decoration: underline;
+}
+
+.sub_menu a {
+  color:#e47b82;
+}
+
+
 
 .logo  a{
   text-transform: uppercase;
@@ -157,7 +175,8 @@ ul{
 }
 
 .change-menuColor{
-  background:rgba(59, 69, 72, 0.851);
+  background:rgba(59, 69, 72, 0.851); 
+  
   color:#10e963bb;
   transition: all 1000ms ease-in;
 }
@@ -202,7 +221,7 @@ ul{
 .background-img{
  background: linear-gradient(rgba(255, 255, 255, 0.077),rgb(4, 2, 2)), url('/Tina/pexels-ary.jpeg') no-repeat center/ cover;
  width: 100%;
- height: 100vh;
+ height: 50vh;
 }
 
 

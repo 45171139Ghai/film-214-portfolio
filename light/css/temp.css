@@ -1,58 +1,101 @@
 section{
     max-width: 100%;
 }
-.imgs{width: 100%;
-padding: 200px;}
+
+.temp{
+    color: orange;
+}
+
+.sun-title{
+  color: orange;
+  background: white;
+  padding: 1em;
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+  
+}
+
+
+
+
+/*
+
+          PICTURES STYLE
+-----------------------------------------
+*/
 
 
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
   gap: 1.5em;
   justify-content: center;
   align-items: center;
-  grid-template-areas: 
-  "img1 img1 "
-  "img1 img3"
-  "img4 img5"
-  "img5 img 5"
-  ;
 }
 
-.img1{
-    grid-area: img1;
+.item{
+  padding: 0;
+  width: 450px;
+  margin: 0;
 }
 
-.img2{
-    grid-area: img2;
+
+.pc1{
+  margin: 0 auto;
 }
 
-.img3{
-    grid-area: img3;
-}
-
-.img4{
-    grid-area: img4;
-}
-
-.img5{
-    grid-area: img5;
+.sp-title{
+  margin-top: 40px;
+  border-top: 1px dotted black;
 }
 
 
 
 
-.item {
+/*
+
+          UTILITY CLASSES
+-----------------------------------------
+*/
+
+.content-wrapper{
+  
+  padding: 40px;
+}
+
+
+@media (max-width: 850px){
+  .item{
+    padding: 0;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+
+
+/* .item {
   padding: 1px;
   background: rgba(238, 240, 241, 0.851);
   color: rgb(200, 208, 214);
-}
+} */
 
 .item.shadow-box {
   box-shadow: 0.4px 0.4px 8px black;
 }
 
-.item:hover {
+/* .item:hover {
   box-shadow: 1px 1px 10px black;
+} */
+
+.grid .setup{
+  grid-template-columns: repeat(3,1fr)
+}
+
+.setup{
+  padding: 40px;
 }
