@@ -1,0 +1,28 @@
+
+
+
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .container-item{
+    padding: 8px;
+    background:rgba(238, 240, 241, 0.851); 
+    
+    color: rgb(200, 208, 214);
+  }
+  
+  .container-item.shadow-box{
+    box-shadow: .4px .4px 8px black;
+  }
+  
+  .container-item:hover{
+    box-shadow: 1px 1px 10px black;
+  }

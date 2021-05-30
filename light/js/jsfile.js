@@ -3,6 +3,8 @@
 
 const myBar = document.querySelector(".menu-bar");
 const myBarFooter = document.querySelector(".footer__link");
+const dropDown = document.querySelector(".project");
+const subMenu = document.querySelector("#it");
 
 window.onscroll = function() {scrollFunction()};
 
@@ -21,6 +23,14 @@ function scrollFunction() {
       myTitle.classList.remove('change-menuColor');
     }
     
+}
+
+
+function onHover(){
+  dropDown.addEventListener('hover', (e) => {
+    classList.remove('sub-menu')
+    e.target.classList.add('display-menu');
+  })
 }
 
 

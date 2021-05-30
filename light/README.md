@@ -1,4 +1,4 @@
 # Lighthouse Loft
-This is a yoga site for a small business around my neigbourhood. 
-It is static based on just html, css and and a bit javascript.
+This is my class portfolio on photography and films production. 
+It is a static site, based on  html, css and and some javascript.
 

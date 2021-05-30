@@ -1,4 +1,36 @@
 
+
+/* color */
+
+.gallery-background {
+  background-color: #303030;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+
+.grid{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.ball{
+  padding: 8px;
+  background:rgba(238, 240, 241, 0.851); 
+  
+  color: rgb(200, 208, 214);
+}
+
+.ball.shadow-box{
+  box-shadow: .1px .1px 2px black;
+}
+
+.ball:hover{
+  box-shadow: 1px 1px 10px black;
+}
+
+
 @media (min-width: 970px){
     .gallery-background {
       max-width: 1080;
