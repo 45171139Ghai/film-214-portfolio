@@ -346,16 +346,24 @@ select:focus{
   gap: 1.5em;
   justify-content: center;
   align-items: center;
-
+  
 }
 
 
 .home__picture{
-  padding: 8px;
+  width: 100%;
+  padding: .2em;
   background:rgba(238, 240, 241, 0.851); 
-  
-  color: rgb(200, 208, 214);
+  color: rgb(0, 123, 218);
 }
+
+.home__picture--size{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+
 
 
 
