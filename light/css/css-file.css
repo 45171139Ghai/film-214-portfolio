@@ -126,13 +126,23 @@ img{
   width: 60%;
 }
 
+
+@media (max-width: 550px) {
+  .links{
+    
+    width: 70%;
+  }
+  
+}
+
+
 ul{
   list-style: none;
 }
 
 .links a{
   text-decoration: none;
-  padding: 1em 1.5em;
+  padding: 1em .4em;
   font-size: 1em;
   letter-spacing: .25em;
   margin-left: 20px; 
