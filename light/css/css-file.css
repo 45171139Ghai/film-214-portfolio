@@ -397,6 +397,7 @@ select:focus{
   color: var(--clr-accent);
   text-align: center;
   font-size: var(--fs-h3);
+  font-family: var(--ff-secondary);
   padding: 2.5em 0;
 }
 
